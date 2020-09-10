@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="RHexBot">
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="1 2.75 0.5" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="1 2.75 0.5" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="eye_l">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.2 0.2 0.1" />
+            </geometry>
+            <material name="Black">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="eye_r">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.2 0.2 0.1" />
+            </geometry>
+            <material name="Black">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <link name="leg_fl">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="leg_fr">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="leg_cl">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="leg_cr">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="leg_rl">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="leg_rr">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Blue">
+                <color rgba="0 0 0.1 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <joint name="body_to_eye_l" type="fixed">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="eye_l" />
+        <origin xyz="-0.3 1.375 0.3"/>
+    </joint>
+
+    <joint name="body_to_eye_r" type="fixed">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="eye_r" />
+        <origin xyz="0.3 1.375 0.3"/>
+    </joint>
+
+    <joint name="body_to_leg_fl" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_fl" />
+        <origin xyz="-0.65 1.1 0"/>
+    </joint>
+
+    <joint name="body_to_leg_fr" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_fr" />
+        <origin xyz="0.65 1.1 0"/>
+    </joint>
+
+    <joint name="body_to_leg_cl" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_cl" />
+        <origin xyz="-0.65 0 0"/>
+    </joint>
+
+    <joint name="body_to_leg_cr" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_cr" />
+        <origin xyz="0.65 0 0"/>
+    </joint>
+
+    <joint name="body_to_leg_rl" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_rl" />
+        <origin xyz="-0.65 -1.1 0"/>
+    </joint>
+
+    <joint name="body_to_leg_rr" type="continuous">
+        <axis rpy="0 0 0" xyz="1 0 0"/>
+        <parent link="base_link" />
+        <child link="leg_rr" />
+        <origin xyz="0.65 -1.1 0"/>
+    </joint>
+
+</robot>

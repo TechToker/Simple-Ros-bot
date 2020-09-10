@@ -1,0 +1,8 @@
+prefix=/home/ideapad/Documents/Projects/ROS/RHexBot/devel
+
+Name: package_bot
+Description: Description of package_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+package_bot
+-DCATKIN_DEVEL_PREFIX=/home/ideapad/Documents/Projects/ROS/RHexBot/devel -DCMAKE_INSTALL_PREFIX=/home/ideapad/Documents/Projects/ROS/RHexBot/install -G Unix Makefiles
