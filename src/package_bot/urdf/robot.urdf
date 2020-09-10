@@ -46,6 +46,69 @@
         </visual>
     </link>
 
+    <link name="hand_link_1">
+        <visual>
+            <origin xyz="0 -0.5 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="hand_link_2">
+        <visual>
+            <origin xyz="0 -0.5 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
+    <link name="hand_link_3">
+        <visual>
+            <origin xyz="0 -0.5 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.3 1 0.15" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </link>
+
     <link name="leg_fl">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -184,6 +247,27 @@
         <parent link="base_link" />
         <child link="eye_r" />
         <origin xyz="0.3 1.375 0.3"/>
+    </joint>
+
+    <joint name="body_to_hand_1" type="continuous">
+        <axis xyz="1 0 0"/>
+        <origin rpy="-2.8 0 0" xyz="0 0 0.25"/>
+        <parent link="base_link" />
+        <child link="hand_link_1" />
+    </joint>
+
+    <joint name="body_to_hand_2" type="continuous">
+        <axis xyz="1 0 0"/>
+        <origin rpy="1.8 0 0" xyz="0 -1 0"/>
+        <parent link="hand_link_1" />
+        <child link="hand_link_2" />
+    </joint>
+
+    <joint name="body_to_hand_3" type="continuous">
+        <axis xyz="1 0 0"/>
+        <origin rpy="-2 0 0" xyz="0 -1 0"/>
+        <parent link="hand_link_2" />
+        <child link="hand_link_3" />
     </joint>
 
     <joint name="body_to_leg_fl" type="continuous">

@@ -1,0 +1,29 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"eye_l" [label="eye_l"];
+"eye_r" [label="eye_r"];
+"leg_cl" [label="leg_cl"];
+"leg_cr" [label="leg_cr"];
+"leg_fl" [label="leg_fl"];
+"leg_fr" [label="leg_fr"];
+"leg_rl" [label="leg_rl"];
+"leg_rr" [label="leg_rr"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "body_to_eye_l" [label="xyz: -0.3 1.375 0.3 \nrpy: 0 -0 0"]
+"body_to_eye_l" -> "eye_l"
+"base_link" -> "body_to_eye_r" [label="xyz: 0.3 1.375 0.3 \nrpy: 0 -0 0"]
+"body_to_eye_r" -> "eye_r"
+"base_link" -> "body_to_leg_cl" [label="xyz: -0.65 0 0 \nrpy: 0 -0 0"]
+"body_to_leg_cl" -> "leg_cl"
+"base_link" -> "body_to_leg_cr" [label="xyz: 0.65 0 0 \nrpy: 0 -0 0"]
+"body_to_leg_cr" -> "leg_cr"
+"base_link" -> "body_to_leg_fl" [label="xyz: -0.65 1.1 0 \nrpy: 0 -0 0"]
+"body_to_leg_fl" -> "leg_fl"
+"base_link" -> "body_to_leg_fr" [label="xyz: 0.65 1.1 0 \nrpy: 0 -0 0"]
+"body_to_leg_fr" -> "leg_fr"
+"base_link" -> "body_to_leg_rl" [label="xyz: -0.65 -1.1 0 \nrpy: 0 -0 0"]
+"body_to_leg_rl" -> "leg_rl"
+"base_link" -> "body_to_leg_rr" [label="xyz: 0.65 -1.1 0 \nrpy: 0 -0 0"]
+"body_to_leg_rr" -> "leg_rr"
+}
